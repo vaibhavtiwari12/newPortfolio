@@ -6,11 +6,7 @@
 	left: 0;
 	top: 0;
 	z-index: 999;
-    background: hsla(8, 79%, 58%, 1);
-    background: linear-gradient(90deg, hsla(8, 79%, 58%, 1) 0%, hsla(358, 78%, 62%, 1) 80%);
-    background: -moz-linear-gradient(90deg, hsla(8, 79%, 58%, 1) 0%, hsla(358, 78%, 62%, 1) 80%);
-    background: -webkit-linear-gradient(90deg, hsla(8, 79%, 58%, 1) 0%, hsla(358, 78%, 62%, 1) 80%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#E9573F", endColorstr="#EA5459", GradientType=1 );
+    background-image: linear-gradient(to right top, #212529, #32383d, #454b51, #586067, #6c757d);
   }
 /* -- Loading thingy --*/
 .loading-dot {
