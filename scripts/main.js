@@ -131,11 +131,17 @@
   }))
 
   var form = document.getElementById("my-form");
-    
   async function handleSubmit(event) {
     event.preventDefault();
     var status = document.getElementById("my-form-status");
     var errorStatus = document.getElementById("my-form-error");
+    var loader = document.getElementById("loader-button");
+    var send = document.getElementById("my-form-button");
+    
+    loader.classList.remove('d-none');
+    send.classList.add('d-none');
+    errorStatus.classList.add('d-none')
+    status.classList.add('d-none')
     var data = new FormData(event.target);
     fetch(event.target.action, {
       method: form.method,
@@ -147,6 +153,9 @@
       if (response.ok) {
         status.innerHTML = "Thanks for your submission!";
         status.classList.remove('d-none')
+        setTimeout(() => {
+          status.classList.add('d-none')
+        }, 2000);
         form.reset()
       } else {
         response.json().then(data => {
@@ -157,11 +166,18 @@
             errorStatus.innerHTML = "Oops! There was a problem submitting your form"
           }
           errorStatus.classList.remove('d-none')
+          setTimeout(() => {
+            errorStatus.classList.add('d-none')
+          }, 2000);
         })
       }
+      loader.classList.add('d-none');
+      send.classList.remove('d-none');
     }).catch(error => {
       errorStatus.innerHTML = "Oops! There was a problem submitting your form"
       errorStatus.classList.remove('d-none')
+      loader.classList.add('d-none');
+      send.classList.remove('d-none');
     });
   }
   form.addEventListener("submit", handleSubmit)
