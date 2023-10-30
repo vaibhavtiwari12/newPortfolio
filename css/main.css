@@ -292,7 +292,7 @@ footer a:not(.nav-link) {
   padding-bottom: 1em;
 }
 
-@media (min-width: 575.98px) {
+@media (min-width: 990px) {
   #navbarSupportedContent .nav-link::after{
     border-bottom: 1px solid #fff;
     content: "";
