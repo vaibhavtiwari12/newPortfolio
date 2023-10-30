@@ -348,3 +348,9 @@ footer a:not(.nav-link) {
   font-weight: 600;
   margin-bottom: 1rem;
 }
+@media (max-width: 900px) {
+  #header-nav.fixed-top{
+    background: none!important;
+    box-shadow: none!important;
+  }
+}
