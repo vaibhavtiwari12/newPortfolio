@@ -7,16 +7,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Vaibhav Tiwari</title>
+	<link href="./css/loader.css" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
 	<link rel="preload" as="style"
 		href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" />
-	<link rel="stylesheet"
+		<link rel="stylesheet"
 		href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" media="print"
 		onload="this.media='all'" />
-	<noscript>
-		<link rel="stylesheet"
+		<noscript>
+			<link rel="stylesheet"
 			href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700;800&amp;display=swap" />
-	</noscript>
+		</noscript>
 	<link href="./css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
 	<link href="./css/bootstrap-icons/bootstrap-icons.css?ver=1.2.0" rel="stylesheet">
 	<link href="./css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
@@ -33,6 +34,9 @@
 </head>
 
 <body id="top">
+	<div class="drawing" id="loading">
+		<div class="loading-dot"></div>
+	  </div>
 	<header class="bg-light">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light" id="header-nav" role="navigation">
 			<div class="container"><a class="link-dark navbar-brand site-title mb-0" href="#"></a>
@@ -822,22 +826,24 @@
 						<div class="row">
 							<div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
 								<div class="bg-light my-2 p-3 pt-2">
-									<form action="https://formspree.io/your@email.com" method="POST">
+									<form id="my-form" action="https://formspree.io/f/xaygvgkd" method="POST">
 										<div class="form-group my-2">
 											<label for="name" class="form-label fw-bolder">Name</label>
-											<input class="form-control" type="text" id="name" name="name" required>
+											<input class="form-control" type="text" id="name" name="Name" required>
 										</div>
 										<div class="form-group my-2">
 											<label for="email" class="form-label fw-bolder">Email</label>
-											<input class="form-control" type="email" id="email" name="_replyto"
+											<input class="form-control" type="email" id="email" name="Email"
 												required>
 										</div>
 										<div class="form-group my-2">
 											<label for="message" class="form-label fw-bolder">Message</label>
 											<textarea class="form-control" style="resize: none;" id="message"
-												name="message" rows="4" required></textarea>
+												name="Message" rows="4" required></textarea>
 										</div>
-										<button class="btn btn-primary mt-2" type="submit">Send</button>
+										<button id="my-form-button" class="btn btn-primary mt-2" type="submit">Send</button>
+										<p id="my-form-status" class="pt-2 text-success d-none"></p>
+										<p id="my-form-error" class="pt-2 text-danger d-none"></p>
 									</form>
 								</div>
 							</div>
@@ -853,25 +859,25 @@
 								<div class="mt-53 px-1">
 									<div class="row">
 										<div class="col-sm-1">
-											<div class="pb-1"><i class="fas fa-envelope"></i></div>
+											<div class="pb-0 pb-sm-0 pb-md-0"><i class="fas fa-envelope"></i></div>
 										</div>
-										<div class="col-sm-11">
-											<div class="pb-1 fw-bolder"><a style="text-decoration:none;color:#000"
+										<div class="col-sm-11 pb-2 pb-sm-1 pb-md-1 pb-lg-1">
+											<div class="pb-0 pb-sm-0 pb-md-0 fw-bolder"><a style="text-decoration:none;color:#000"
 													href="mailto:tvaibhav1204@gmail.com">
 													<div class="sub_text_contact">tvaibhav1204@gmail.com</div>
 												</a></div>
 										</div>
 										<div class="col-sm-1">
-											<div class="pb-1"><i class="fas fa-phone"></i></div>
+											<div class="pb-0 pb-sm-0 pb-md-0"><i class="fas fa-phone"></i></div>
 										</div>
-										<div class="col-sm-11">
+										<div class="col-sm-11 pb-2 pb-sm-1 pb-md-1 pb-lg-1">
 											<div class="pb-1 fw-bolder">+91-9167001232</div>
 										</div>
 										<div class="col-sm-1">
-											<div class="pb-1"><i class="fas fa-location-arrow"></i></div>
+											<div class="pb-0 pb-sm-0 pb-md-0"><i class="fas fa-location-arrow"></i></div>
 										</div>
-										<div class="col-sm-11">
-											<div class="pb-1 fw-bolder">Hinejwadi, Pune</div>
+										<div class="col-sm-11 pb-2 pb-sm-1 pb-md-1 pb-lg-1">
+											<div class="pb-0 pb-sm-0 pb-md-0 fw-bolder">Hinejwadi, Pune</div>
 										</div>
 									</div>
 								</div>
