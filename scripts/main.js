@@ -35,8 +35,12 @@
       $('#services').click(function(){scrollToFunc('services')})
       $('#skills').click(function(){scrollToFunc('skills')})
       $('#contact').click(function(){scrollToFunc('contact')})
+      
       $('#nav-icon3,#about-link,#services-link,#skills-link,#experience-link,#contact-link').click(function(){
         $('#nav-icon3').toggleClass('open');
+      });
+      $('#nav-icon3').click(function(){
+          $('#navbarSupportedContent').toggleClass('show');
       });
     //Ajax Example
       if ($('.typed-text-output').length == 1) {
