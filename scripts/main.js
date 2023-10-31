@@ -22,13 +22,13 @@
    // Add your javascript here
   (function ($) {
     $(window).on('load', function() {
-      $('#loading').slideUp(1000);
+      $('#loading').slideUp(7000);
   });
     $(document).ready(function(){
       var scrollToFunc = function(element){
         $('html, body').animate({
           scrollTop: $("#"+element).offset().top
-        }, 700);
+        }, 200);
       }
       $('#experience-link').click(function(){scrollToFunc('experience')})
       $('#about-link').click(function(){scrollToFunc('about')})
