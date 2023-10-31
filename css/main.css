@@ -353,7 +353,7 @@ footer a:not(.nav-link) {
     width: 30px;
     height: 25px;
     position: relative;
-    margin: 5px 0 5px 0;
+    margin: 5px 10px 5px 0;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
