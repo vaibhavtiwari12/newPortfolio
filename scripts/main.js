@@ -25,7 +25,19 @@
       $('#loading').slideUp(1000);
   });
     $(document).ready(function(){
-     
+      var scrollToFunc = function(element){
+        $('html, body').animate({
+          scrollTop: $("#"+element).offset().top
+        }, 700);
+      }
+      $('#experience').click(function(){scrollToFunc('experience')})
+      $('#about').click(function(){scrollToFunc('about')})
+      $('#services').click(function(){scrollToFunc('services')})
+      $('#skills').click(function(){scrollToFunc('skills')})
+      $('#contact').click(function(){scrollToFunc('contact')})
+      $('#nav-icon3,#about-link,#services-link,#skills-link,#experience-link,#contact-link').click(function(){
+        $('#nav-icon3').toggleClass('open');
+      });
     //Ajax Example
       if ($('.typed-text-output').length == 1) {
         var typed_strings = $('.typed-text').text();
@@ -50,16 +62,7 @@
           return false;
         });
     })
-      var scrollToFunc = function(element){
-        $('html, body').animate({
-          scrollTop: $("#"+element).offset().top
-      }, 700);
-      $('#experience-link').click(function(){scrollToFunc('experience')})
-      $('#about-link').click(function(){scrollToFunc('about')})
-      $('#services-link').click(function(){scrollToFunc('services')})
-      $('#skills-link').click(function(){scrollToFunc('skills')})
-      $('#contact-link').click(function(){scrollToFunc('contact')})
-      }
+      
   })(jQuery);
 
   /**
