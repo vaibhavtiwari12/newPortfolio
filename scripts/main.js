@@ -22,13 +22,13 @@
    // Add your javascript here
   (function ($) {
     $(window).on('load', function() {
-      $('#loading').slideUp(7000);
+      $('#loading').slideUp(700);
   });
     $(document).ready(function(){
       var scrollToFunc = function(element){
         $('html, body').animate({
           scrollTop: $("#"+element).offset().top
-        }, 200);
+        }, 100);
       }
       $('#experience-link').click(function(){scrollToFunc('experience')})
       $('#about-link').click(function(){scrollToFunc('about')})
@@ -38,7 +38,7 @@
       
       $('#nav-icon3,#about-link,#services-link,#skills-link,#experience-link,#contact-link').click(function(){
         $('#nav-icon3').toggleClass('open');
-        $('#navbarSupportedContent').toggleClass('show');
+        $('#navbarSupportedContent').toggleClass('show hide');
       });
     //Ajax Example
       if ($('.typed-text-output').length == 1) {
